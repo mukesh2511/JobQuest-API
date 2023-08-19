@@ -23,7 +23,7 @@ const connect = async () => {
   }
 };
 const corsOptions = {
-  origin: ["https://stripe.com", "http://localhost:5173"],
+  origin: ["https://stripe.com", "https://jobquest-client.onrender.com"],
   credentials: true,
 };
 app.use(cors(corsOptions));
