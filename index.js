@@ -23,6 +23,7 @@ const connect = async () => {
   }
 };
 const corsOptions = {
+  // origin: ["https://stripe.com", "http://localhost:5173"],
   origin: ["https://stripe.com", "https://jobquest-client.onrender.com"],
   credentials: true,
 };
@@ -45,7 +46,7 @@ app.use((err, req, res, next) => {
   return res.status(errorStatus).send(errorMessage);
 });
 
-app.listen(8000, () => {
+app.listen(5000, () => {
   connect();
   console.log("Backend server is running");
 });
